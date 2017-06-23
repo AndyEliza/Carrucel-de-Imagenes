@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CARRUCEL</title>
+<meta charset="utf-8">
+<meta auuthor="Andrea Ortuño" description="carrucel de imagenes">
+
+<h1><b> <center>Imágenes</center></b> </h1>
+
+</head>
+<body > 
+<br>
+<br>
+
+  <center><table class="centrada"></center>
+  <tr>
+  <td colspan= "2" align="center" width="50%" height="280">
+  <img src="imagenes/1.jpg" name="Carrusel" height="300"></td>
+  </tr>
+  <tr>
+  <td align ="center"><button onClick="anterior()" id="boton_1" ><<< Anterior</button></td>
+  <td align ="center"><button onClick="siguiente()" id="boton_2" >Siguiente >>></button></td>
+  </tr>
+  </table>
+
+</body>
+</html>
+<script>
+  
+    var Fotos; 
+    var V_max; 
+    var aux;   
+    var aux_2; 
+    Fotos = new Array(); 
+    aux_2 = 0;
+    Fotos [0] = "imagenes/1.jpg"  
+    Fotos [1] = "imagenes/2.jpg" 
+    Fotos [2] = "imagenes/3.jpg" 
+    Fotos [3] = "imagenes/4.jpg" 
+    Fotos [4] = "imagenes/5.jpg" 
+    Fotos [5] = "imagenes/6.jpg" 
+    Fotos [6] = "imagenes/7.jpg" 
+    Fotos [7] = "imagenes/8.jpg" 
+    Fotos [8] = "imagenes/9.jpg" 
+    Fotos [9] = "imagenes/10.jpg" 
+    
+    
+    V_max = Fotos.length; 
+    V_max = V_max-1; 
+    function siguiente () {
+      
+      if (aux_2 == V_max){      
+        aux_2 = 0;      
+      }
+      else{
+        aux_2 = aux_2+1;
+      }
+      document.images.Carrusel.src = Fotos[aux_2];
+    }
+  
+
+    function anterior () {
+      
+      if (aux_2 == 0){      
+        aux_2 = V_max;      
+      }
+      else{
+        aux_2 = aux_2-1;
+      }
+      document.images.Carrusel.src = Fotos[aux_2];
+    }
+</script>
